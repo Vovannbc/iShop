@@ -1,0 +1,189 @@
+body {margin: 0 auto; padding: 0; max-width: 1100px;
+    background-color: #f7f7f7;}
+/*ХЕДЕР*/
+header {background:url("../img/head_background.jpg");
+    background-repeat: no-repeat;
+    color: #eff8e0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 29px 99px 48px 101px;}
+.logo {font-family: Calibri;
+    font-size: 40px;
+    font-style: oblique;  }
+address {font-style: normal;
+    text-align: end;}
+header p {margin: 0;
+    padding: 0;
+    font-size: 16px;}
+
+/*НАВИГАЦИЯ*/
+
+nav {margin: 0 auto;    /*вирівняли по центру*/
+    min-height: 30px;   /*задали висоту, ширину*/
+    max-width: 900px;
+    background: #c3dc71; /* Old browsers */
+    background: -moz-linear-gradient(top, #c3dc71 1%, #7b972c 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #c3dc71 1%,#7b972c 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #c3dc71 1%,#7b972c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c3dc71', endColorstr='#7b972c',GradientType=0 );  /*нужно вставить градиент*/
+    display: flex;                      /*флексом, простір заповнить між елементами */
+    justify-content: space-between;
+    border-radius: 10px;                /*округлить кути*/
+    position: relative;                 /*щоб піднять - міняєм положення на відносне і пуднімаєм*/
+    bottom:28px;
+    z-index: 100}                       /*відображать перекриваючи всі елементи*/
+nav>ul {padding: 0; margin: 0;  /*скидаємо відступи, стиль списку*/
+    list-style: none;
+    display: flex;              /*флекс, рядком, простір між елементами*/
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: Calibri;       /*шрифт, розмір*/
+    font-size: 13px;}
+nav ul li { text-transform: uppercase;} /*всі великі літери*/
+.active {position: relative;}           /*відносне положення*/
+.menu {position: absolute;              /*абсолютне положення*/
+    list-style: none;                   /*скинуть стиль списку, колір, фон, ширина, сховати меню */
+    color: #666666;
+    background-color: #83a03c;
+    min-width: 150px;
+    padding: 0;
+    display: none;
+    }
+.menu a:hover {background-color: #a3d39c;   /*при наведенні змінює фон, з затримкою*/
+    transition: 1s all;}      /**/
+.active:hover .menu {display: flex;         /*при наведенні показує меню*/
+    flex-direction: column;}
+nav>ul>li a {display: block;        /*вид блочний, відступи, колір*/
+    padding: 18px 10px 18px 19px;
+    color: #fff;}
+nav a {text-decoration: none;}
+nav .bascket {margin-right: 22px;       /*зроблено корзину*/
+    align-self: center;
+    width: 90px;
+    height: 30px;
+    border-radius: 12px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    text-transform: capitalize;}
+.bascket span {                     /*напис корзина*/
+    font-family: Calibri;
+    font-size: 14px;
+    color: #83a03c;}
+
+/*АРТИКЛ*/
+.body {margin: 0 auto;                  /*великий блок, в якому знаходяться інші*/
+    display: flex;
+    flex-direction: row;                /*вид флекс, ширина, фон, щоб підтянуть колір під навігацію, - відносне положення і піднімаю*/
+    background-color: white;
+    max-width: 900px;
+    position: relative;
+    bottom: 34px;}
+
+article {margin: 45px auto 10px auto;       /*знаходяться два блока з товарами і книпки переходу сторінок внизу*/
+    padding: 22px 10px;                     /*налаштовую*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+.items {display: flex;          /*налаштування розміщення товарів у центрі сторінки*/
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;  }
+
+.items div {display: flex;          /*розміщення картинки і тексту в кожному товарі*/
+    flex-direction: column;
+    color: #666666;
+    background-color: #fafafa;
+    font-size: 11px;
+    max-width: 152px;
+    border-radius: 10px;
+    margin-bottom: 10px;  }
+.items>div>img {margin: 16px 7px 7px 7px;}
+
+.apple {font-size: 13px;            /*стиль напису*/
+    color: #adb695;
+    text-align: center;}
+
+.price {font-size: 14px;            /*стиль ціни*/
+    text-align: center;
+    padding: 2px;}
+article input {border: 2px solid #8fad38;       /*стиль кнопки*/
+    border-radius: 20px;
+    margin: 7px 17px;
+    padding: 9px;}
+.pages {display: flex;              /*налаштування блоку з кнопками сторінок*/
+    flex-direction: row;
+    justify-content: flex-start;
+    }
+.pages input {background-color: #9eb947;            /*налаштування кнопок сторінок*/
+    border-radius: 5px;
+    border: none;
+    margin: 2px;
+    padding: 5px 9px;}
+
+/*ЕСАЙД*/
+.category {                                     /*титульні написи на Есайді*/
+    background: #c3dc71; /* Old browsers */             /*градієнт фону*/
+    background: -moz-linear-gradient(top, #c3dc71 1%, #7b972c 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #c3dc71 1%,#7b972c 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #c3dc71 1%,#7b972c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    color: white;
+    text-transform: uppercase;
+    font-size: 15px;
+    padding: 12px 13px;                 /*колір, шрифт, відступи, округлення, ширина*/
+    border-radius: 10px;
+    text-align: center;
+    font-family: Calibri;
+    max-width: 189px;
+    margin: 17px 14px;
+      }
+aside {width: 30%;}                 /*частка ширини для есайду*/
+aside>ul {list-style: none;         /*стиль списку каталогу товарів*/
+    margin:0 10px; padding: 0;  }
+aside>ul a {color: #aaaaaa;         /*посилання в каталогу товарів, колір, шрифт*/
+    text-decoration: none;
+    font-family: Tahoma;
+    font-size: 12px;
+}
+hr {padding: 0px;                   /*полоска між елементами списку*/
+    margin: 0;}
+
+section {display: flex;             /*стиль секшна*/
+    flex-direction: column;
+    justify-content: flex-start;
+    font-family: Calibri;
+    font-size: 11px;}
+section>div {border-radius: 10px;   /*стиль блоків секшна - відступи, округлення*/
+    padding: 13px 9px;
+    margin: 5px 10px;}
+section>div:first-child {background-color: #fff8d8;}        /*кольори блоків*/
+section>div:nth-child(2) {background-color: #eeffd8;}
+section>div:last-child {background-color: #d8faff;}
+/*ФУТЕР*/
+footer {max-width: 900px;            /*футер - ширина, вирівнювання, флекс, фон, шрифт*/
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    font-family: Calibri;
+    font-size: 11px;
+    position: relative;        /*міняю положення щоб піднять - знаю що не ідеально - сорі - нічого іншого поки не придумав*/
+    bottom: 34px;}
+footer ul {list-style: none;    /*стиль списку*/
+    font-size: 10px;
+    }
+footer>div {display: flex;          /*блоки футера - флекс*/
+    flex-direction: row;
+    justify-content: space-between;
+    }
+footer .etc {                       /*сірі непонятні кубики*/
+    align-self: center;
+    width: 60px;
+    height: 30px;
+    background-color: #666666;
+    margin: 5px;}
